@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="autor" content="Irung Meschac">
+    <meta name="description" content="Steganography challenge by jonathan yombo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steganography Challenge</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="row">
+        <div class="row">
+            <input class="input" type="file" name="img" accept="image/*" onchange="readUrl(this)">
+            <input class="text" type="text" name="text" id="text" placeholder="Your message here">
+            <button id="btn">Crypt your message</button>
+        </div>
+        <div class="ml-5 row">
+            <h2>Image source</h2>
+            <img id="image1" class="source" src="" width="200" alt="">
+        </div>        
+        <div class="ml-5 row">
+            <h2>Crypted image</h2>
+            <img id="image2" src="" width="300" alt="">
+        </div>
+    </div>
+        
+    <div>
+        <h2>Decode an image</h2>
+        <input class="input mt-5" type="file" name="img" accept="image/*" onchange="decode(this)">
+
+        <h1>The text in the image is :</h1>
+        <p id="decoded"></p>
+    </div>
+
+    <script src="js/steganography.js"></script>
+    <script src="js/test.js"></script>
+</body>
+</html>
